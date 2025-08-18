@@ -1,0 +1,7 @@
+# agent-swap-meet/Cargo.toml
+[workspace]
+members = [
+    "contracts/agent-nft",
+    "contracts/lore-nft",
+    "contracts/payment-escrow",
+]
