@@ -1,0 +1,49 @@
+[package]
+name = "agent-nft"
+version = "0.1.0"
+authors = ["yato-sketch <85409544+Nishan30@users.noreply.github.com>"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[profile.release]
+opt-level = 3
+debug = false
+rpath = false
+lto = true
+debug-assertions = false
+codegen-units = 1
+panic = 'abort'
+incremental = false
+overflow-checks = true
+
+[features]
+# use library feature to disable all instantiate/execute/query exports
+library = []
+
+[package.metadata.scripts]
+optimize = """docker run --rm -v "$(pwd)":/code \
+  --mount type=volume,source="$(basename "$(pwd)")_cache",target=/target \
+  --mount type=volume,source=registry_cache,target=/usr/local/cargo/registry \
+  cosmwasm/optimizer:0.16.0
+"""
+
+# In contracts/agent-nft/Cargo.toml AND contracts/lore-nft/Cargo.toml
+
+[dependencies]
+cosmwasm-std = "1.5.0"
+cosmwasm-storage = "1.5.0"
+cw-storage-plus = "1.2.0"
+cw2 = "1.1.2"
+cw721 = "0.18.0"
+cw721-base = { version = "0.18.0", features = ["library"] }
+schemars = "0.8.16"
+serde = { version = "1.0.193", default-features = false, features = ["derive"] }
+thiserror = "1.0.50"
+cosmwasm-schema = "1.5.0" # <-- ADD THIS LINE
+
+[dev-dependencies]
+cw-multi-test = "2.0.0"

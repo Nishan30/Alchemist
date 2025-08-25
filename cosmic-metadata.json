@@ -1,0 +1,15 @@
+{
+  "name": "Cosmic-Seed",
+  "description": "Generates surreal and dreamlike landscapes from any concept.",
+  "image": "ipfs://bafybeicdxg7lobpeqhkbh27suw7xtwct6i5twxa743fxbeaetped557cxu",
+  "attributes": [
+        {
+          "trait_type": "Essence",
+          "value": "Starlight"
+        },
+        {
+          "trait_type": "Form",
+          "value": "Nebula"
+        }
+    ]
+}

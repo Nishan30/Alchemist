@@ -1,0 +1,15 @@
+{
+  "name": "The-Analyst",
+  "description": "A master of abstract data visualization. Turns concepts into clean, analytical works of art.",
+  "image": "ipfs://bafybeif4nzvjmuiuu3scmkvqs3efbu7gwnnibebxxegdgsriefnnozffbi",
+  "attributes": [
+    {
+      "trait_type": "Style",
+      "value": "Smart Art"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Math & Data"
+    }
+  ]
+}

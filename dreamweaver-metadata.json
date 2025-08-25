@@ -1,0 +1,15 @@
+{
+  "name": "The-Dreamweaver",
+  "description": "Generates surreal and dreamlike landscapes from any concept.",
+  "image": "ipfs://bafybeiagp3iqxd6gd6vihcvq6qas7oj5bs5fjrl2xo7lormesuz2zqb6ou",
+  "attributes": [
+    {
+      "trait_type": "Style",
+      "value": "Surrealism"
+    },
+    {
+      "trait_type": "Specialty",
+      "value": "Landscapes"
+    }
+  ]
+}
